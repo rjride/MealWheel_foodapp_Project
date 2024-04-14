@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { CardProvider } from './components/ContextReducer';
+// import { ReactFromModule } from '../back_end';
+// console.log(React === ReactFromModule);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
+   <React.StrictMode>
+  <CardProvider>
+        <App />
+  </CardProvider>
   </React.StrictMode>
 );
 
